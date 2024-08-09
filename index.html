@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automa 工作流触发器</title>
+    <style>
+      /* 添加一些简单的样式 */
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 按钮点击后触发 Automa 工作流 -->
+    <button id="startWorkflow">启动工作流</button>
+
+    <script>
+      // 给按钮添加点击事件监听器
+      document
+        .getElementById("startWorkflow")
+        .addEventListener("click", function () {
+          // 使用 Chrome 扩展 URL 触发 Automa 工作流
+          window.location.href =
+            "chrome-extension://infppggnoaenmfagbfknfkancpbljcca/execute.html#/VQMU0IbhqEdlHZBwFoUo2";
+        });
+    </script>
+  </body>
+</html>
